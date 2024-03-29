@@ -192,6 +192,6 @@
 // echo $result;
 
 // //php running
-echo "<h1>Hello World!</h1>";
-echo "<p>Nama saya Tjoet Muty Ahmad dan saya sedang mempelajari 
-pemrograman PHP</p>";
+// echo "<h1>Hello World!</h1>";
+// echo "<p>Nama saya Tjoet Muty Ahmad dan saya sedang mempelajari 
+// pemrograman PHP</p>";
