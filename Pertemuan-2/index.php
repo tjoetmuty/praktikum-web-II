@@ -123,23 +123,23 @@
 
 
 // //TIMEZONE
-echo "Today is " . date("Y/m/d") . "<br>"; 
+// echo "Today is " . date("Y/m/d") . "<br>"; 
 
 
-echo "The time is " . date("H:i:sa") . "<br>";
+// echo "The time is " . date("H:i:sa") . "<br>";
 
 
-$text = strtotime("2024-03-05");
-echo "Created date is " . date("D, F Y", $text) . "<br>";
+// $text = strtotime("2024-03-05");
+// echo "Created date is " . date("D, F Y", $text) . "<br>";
 
-$text = strtotime("tomorrow");
-echo "Created date is " . date("d-m-Y", $text) . "<br>";
+// $text = strtotime("tomorrow");
+// echo "Created date is " . date("d-m-Y", $text) . "<br>";
 
-$text = strtotime("next week");
-echo "Created date is " . date("d-m-Y", $text) . "<br>";
+// $text = strtotime("next week");
+// echo "Created date is " . date("d-m-Y", $text) . "<br>";
 
-$text = strtotime("3 month");
-echo "Created date is " . date("d-m-Y", $text) . "<br>";
+// $text = strtotime("3 month");
+// echo "Created date is " . date("d-m-Y", $text) . "<br>";
 
-$text = strtotime("next years");
-echo "Created date is " . date("d-m-Y", $text) . "<br>";
+// $text = strtotime("next years");
+// echo "Created date is " . date("d-m-Y", $text) . "<br>";
