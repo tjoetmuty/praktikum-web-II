@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Praktikum Form Handling</h1>
-    <form action="proses.php">
+    <form action="" method="post">
         <label for="name">Nama</label><br>
         <input type="text" name="name"><br>
         <label for="name">Email</label><br>
@@ -20,4 +20,20 @@
         <input type="submit" name="submit"><br>
     </form>
 </body>
-</html>
+<?php
+
+if(isset($_POST["submit"])){
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $jk = $_POST["jk"];
+        $nilai = $_POST["nilai"];
+    
+        echo "Halo nama saya $name <br>";
+        echo "Ini email saya $email <br>";
+        echo "Jenis kelamin saya adalah $jk <br>";
+        echo "Ini adalah nilai saya $nilai";
+    } else {
+        echo "Request Denied";
+    }
+}
