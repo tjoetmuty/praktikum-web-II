@@ -46,8 +46,10 @@
                     <p class="text-lg">{{$mahasiswa->jurusan}}</p>
                 </div>
                 <div class="mb-4">
-                    <a href="{{route('mahasiswa.index')}}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded inline-block mb-1">Kembali</a>
-                    <a href="{{route('mahasiswa.edit', $mahasiswa->id)}}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded inline-block mb-1">Edit</a>
+                    <a href="{{route('mahasiswa.index')}}" 
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded inline-block mb-1">Kembali</a>
+                    <a href="{{route('mahasiswa.edit', $mahasiswa->id)}}" 
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded inline-block mb-1">Edit</a>
                 </div>
             </div>
         </div>

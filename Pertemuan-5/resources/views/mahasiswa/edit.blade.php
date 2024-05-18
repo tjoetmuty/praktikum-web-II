@@ -29,7 +29,8 @@
 
             <div class="mb-4">
                 <label for="nim" class="block text-gray-700 text-sm font-bold mb-2">NIM:</label>
-                <input type="text" id="nim" name="nim" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('nim') is-invalid @enderror"
+                <input type="text" id="nim" name="nim" 
+                class="border border-gray-300 rounded-md py-2 px-3 w-full @error('nim') is-invalid @enderror"
                 value="{{old('nim', $mahasiswa->nim)}}">
             </div>
 
@@ -43,7 +44,8 @@
             
             <div class="mb-4">
                 <label for="nama" class="block text-gray-700 text-sm font-bold mb-2">Nama:</label>
-                <input type="text" id="nama" name="nama" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('nim') is-invalid @enderror"
+                <input type="text" id="nama" name="nama" 
+                class="border border-gray-300 rounded-md py-2 px-3 w-full @error('nim') is-invalid @enderror"
                 value="{{old('nim', $mahasiswa->nama)}}">
             </div>
 
@@ -58,7 +60,8 @@
 
             <div class="mb-4">
                 <label for="tempatLahir" class="block text-gray-700 text-sm font-bold mb-2">Tempat Lahir:</label>
-                <input type="text" id="tempatLahir" name="tempatLahir" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('tempatLahir') is-invalid @enderror"
+                <input type="text" id="tempatLahir" name="tempatLahir" 
+                class="border border-gray-300 rounded-md py-2 px-3 w-full @error('tempatLahir') is-invalid @enderror"
                 value="{{old('nim', $mahasiswa->tempat_lahir)}}">
             </div>
 
@@ -73,7 +76,8 @@
 
             <div class="mb-4">
                 <label for="tanggalLahir" class="block text-gray-700 text-sm font-bold mb-2">Tanggal Lahir:</label>
-                <input type="text" id="tanggalLahir" name="tanggalLahir" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('tempatLahir') is-invalid @enderror"
+                <input type="text" id="tanggalLahir" name="tanggalLahir" 
+                class="border border-gray-300 rounded-md py-2 px-3 w-full @error('tempatLahir') is-invalid @enderror"
                 value="{{old('nim', $mahasiswa->tanggal_lahir)}}">
             </div>
 
@@ -89,20 +93,24 @@
                 <label for="jenisKelamin" class="block text-gray-700 text-sm font-bold mb-2">Jenis Kelamin:</label>
                 @if($mahasiswa->jenis_kelamin == "Laki-Laki")
                 <div class="flex items-center mb-4">
-                    <input type="radio" id="jk" name="jk" value="Laki-Laki" class="form-radio h-5 w-5 text-blue-600 @error('jk') is-invalid @enderror" checked>
+                    <input type="radio" id="jk" name="jk" value="Laki-Laki" 
+                    class="form-radio h-5 w-5 text-blue-600 @error('jk') is-invalid @enderror" checked>
                     <label for="male" class="ml-2">Laki-Laki</label>
                 </div>
                 <div class="flex items-center mb-4">
-                    <input type="radio" id="jk" name="jk" value="perempuan" class="form-radio h-5 w-5 text-blue-600 @error('jk') is-invalid @enderror" >
+                    <input type="radio" id="jk" name="jk" value="perempuan" 
+                    class="form-radio h-5 w-5 text-blue-600 @error('jk') is-invalid @enderror" >
                     <label for="female" class="ml-2">Perempuan</label>
                 </div>
                 @else
                 <div class="flex items-center mb-4">
-                    <input type="radio" id="jk" name="jk" value="Laki-Laki" class="form-radio h-5 w-5 text-blue-600 @error('jk') is-invalid @enderror">
+                    <input type="radio" id="jk" name="jk" value="Laki-Laki" 
+                    class="form-radio h-5 w-5 text-blue-600 @error('jk') is-invalid @enderror">
                     <label for="male" class="ml-2">Laki-Laki</label>
                 </div>
                 <div class="flex items-center mb-4">
-                    <input type="radio" id="jk" name="jk" value="perempuan" class="form-radio h-5 w-5 text-blue-600 @error('jk') is-invalid @enderror" checked>
+                    <input type="radio" id="jk" name="jk" value="perempuan" 
+                    class="form-radio h-5 w-5 text-blue-600 @error('jk') is-invalid @enderror" checked>
                     <label for="female" class="ml-2">Perempuan</label>
                 </div>
                 @endif
@@ -115,23 +123,25 @@
             </div>
             @enderror
 
-            <div class="mb-4">
+            <div class="mb-4"> 
                 <label for="prodi" class="block text-gray-700 text-sm font-bold mb-2">Prodi:</label>
-                <input type="text" id="prodi" name="prodi" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('prodi') is-invalid @enderror"
+                <input type="text" id="prodi" name="prodi" 
+                class="border border-gray-300 rounded-md py-2 px-3 w-full @error('prodi') is-invalid @enderror"
                 value="{{old('nim', $mahasiswa->prodi)}}">
             </div>
 
            
             @error('prodi')
             <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
-                <p class="font-bold">{{$message}}</p>
+                <p class="font-bold">{{$message}}</p> 
             </div>
             @enderror
         
 
             <div class="mb-4">
                 <label for="jurusan" class="block text-gray-700 text-sm font-bold mb-2">Jurusan:</label>
-                <input type="text" id="jurusan" name="jurusan" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('jurusan') is-invalid @enderror"
+                <input type="text" id="jurusan" name="jurusan" 
+                class="border border-gray-300 rounded-md py-2 px-3 w-full @error('jurusan') is-invalid @enderror"
                 value="{{old('nim', $mahasiswa->jurusan)}}">
             </div>
 
