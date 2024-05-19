@@ -7,3 +7,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/mahasiswa', \App\Http\Controllers\MahasiswaController::class);
+Route::resource('/login', \App\Http\Controllers\UserController::class);
