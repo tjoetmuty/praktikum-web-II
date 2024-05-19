@@ -7,4 +7,6 @@ Route::get('/', function () {
 });
 
 Route::resource('/mahasiswa', \App\Http\Controllers\MahasiswaController::class);
-Route::resource('/login', \App\Http\Controllers\UserController::class);
+
+Route::get('/user', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+Route::post('/user/login', [\App\Http\Controllers\UserController::class, 'login'])->name('user.login');

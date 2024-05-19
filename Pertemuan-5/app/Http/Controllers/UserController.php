@@ -4,30 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class UserController extends Controller
 {
-    /**
-     * @return RedirectResponse
-     */
-    
-   public function store(Request $request): RedirectResponse
+   public function index(): View
    {
-       // validate form
-       $request->validate([
-           'name'           => 'required',
-           'email'          => 'required',
-           'password'       => 'required',
-       ]);
-
-
-       User::create([
-           'name'           => $request->name,
-           'email'          => $request->email,
-           'password'       => $request->password,
-           ]);
-
-       //redirect to index
-       return redirect()->route('mahasiswa.index')->with(['success' => 'Data berhasil Disimpan!']);
+    return view("user.index");
    }
+
+   public function login(Request $request) : RedirectResponse
+   {
+      $request->validate([
+         'email'          => 'required',
+         'password'       => 'required',
+     ]);
+
+      $user = User::where('email', $request->email)->first();  
+     if ($user){
+        if($user->password == $request->password){
+           return redirect()->route('mahasiswa.index')->with(['success' => 'Berhasil Login']);
+        }else{
+            return redirect()->route("user.index")->with(['error' => 'Gagal Login - pass salah']);
+        }
+      }
+      return redirect()->route("user.index")->with(['error' => 'Gagal Login - Email salah']);
+   }
+   
 }
