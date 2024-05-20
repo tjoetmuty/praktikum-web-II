@@ -9,7 +9,7 @@
 <body class="flex justify-center mt-28">
     <div class="w-[400px] border-2 border-solid border-white shadow-md rounded-lg  flex flex-col justify-center py-8">
         <h1 class="font-bold m-2 text-[30px]">hi hey hello</h1>
-        <form action="{{ route('user.login')}}" method="post" class="flex flex-col gap-4 m-2">
+        <form action="{{ route('mahasiswa.index')}}" method="post" class="flex flex-col gap-4 m-2">
             @csrf
             <div class="flex flex-col gap-2">
                 <div class="flex flex-col ">
