@@ -31,5 +31,5 @@ class UserController extends Controller
       }
       return redirect()->route("user.index")->with(['error' => 'Gagal Login - Email salah']);
    }
-   
+
 }
