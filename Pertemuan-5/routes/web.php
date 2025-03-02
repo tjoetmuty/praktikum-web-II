@@ -6,6 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::resource('/mahasiswa', \App\Http\Controllers\MahasiswaController::class);
 
 Route::get('/user', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');

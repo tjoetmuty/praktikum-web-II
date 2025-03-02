@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -21,7 +20,7 @@ class UserController extends Controller
          'password'       => 'required',
      ]);
 
-      $user = User::where('email', $request->email)->first();  
+   $user = User::where('email', $request->email)->first();  
      if ($user){
         if($user->password == $request->password){
            return redirect()->route('mahasiswa.index')->with(['success' => 'Berhasil Login']);

@@ -32,7 +32,7 @@ class MahasiswaController extends Controller
      */
     public function create() : View
     {
-        return view('mahasiswa.create');
+        return view('mahasiswa.create'); 
     }
     /**
      * store
